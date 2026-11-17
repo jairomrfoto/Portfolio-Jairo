@@ -50,6 +50,21 @@ const CONTENIDO = {
       ],
     },
     {
+      titulo: "Gobierno de Cantabria",
+      disciplina: "Fotografía",
+      anio: "2023",
+      resumen:
+        "Fotografía institucional durante mis prácticas en el Gobierno de Cantabria: " +
+        "actos públicos, firmas, atención a medios y una inauguración de exposición.",
+      imagenes: [
+        { src: "assets/fotos/gob-01.webp", pie: "Intervención en un acto de la Asociación Cántabra de la Empresa Familiar (ACEFAM)" },
+        { src: "assets/fotos/gob-02.webp", pie: "Declaraciones a los medios" },
+        { src: "assets/fotos/gob-03.webp", pie: "Firma en la sede del Gobierno de Cantabria" },
+        { src: "assets/fotos/gob-04.webp", pie: "Asistentes antes del inicio de un acto" },
+        { src: "assets/fotos/gob-05.webp", pie: "Inauguración de la exposición homenaje «Año Orallo 2023»" },
+      ],
+    },
+    {
       titulo: "Proyecto de marketing",                           // ← nombre real
       disciplina: "Marketing",
       anio: "20XX",
@@ -62,17 +77,6 @@ const CONTENIDO = {
       anio: "20XX",
       resumen: "Qué era el proyecto, qué hiciste y qué salió.",   // ← completa
       imagenes: [{ src: "assets/proyectos/proyecto-2.webp", pie: "Pie de imagen" }],
-    },
-    {
-      titulo: "Serie fotográfica",                               // ← nombre real
-      disciplina: "Fotografía",
-      anio: "20XX",
-      resumen: "Describe la serie: tema, lugar, intención.",      // ← completa
-      imagenes: [
-        { src: "assets/fotos/foto-05.webp", pie: "Pie de foto" },
-        { src: "assets/fotos/foto-06.webp", pie: "Pie de foto" },
-        { src: "assets/fotos/foto-07.webp", pie: "Pie de foto" },
-      ],
     },
     {
       titulo: "Proyecto de branding",                            // ← nombre real
@@ -101,6 +105,10 @@ const CONTENIDO = {
       titulo: "Prácticas en el Real Racing Club de Santander", lugar: "Santander",
       texto: "Prácticas en el club, donde realicé sesiones de fotografía de moda con sus prendas.",
       puntos: ["Fotografía de moda para el club en exteriores e interiores"] },
+    { id: "gobierno", tipo: "experiencia", fechas: "2023",
+      titulo: "Prácticas en el Gobierno de Cantabria", lugar: "Santander",
+      texto: "Prácticas en las que cubrí con fotografía actos institucionales, firmas y atención a medios.",
+      puntos: ["Fotografía de actos oficiales, eventos y comparecencias ante la prensa"] },
     { id: "eeuu", tipo: "experiencia", fechas: "Veranos 20XX y 20XX", // ← años
       titulo: "Trabajo de verano en Estados Unidos", lugar: "Empresa o lugar, ciudad",  // ← completa
       texto: "Dos temporadas trabajando en Estados Unidos en un entorno 100 % en inglés." },
@@ -113,7 +121,7 @@ const CONTENIDO = {
   // ---------- Capacidades ----------
   // "donde": ids de la trayectoria donde aprendiste o usaste cada capacidad
   capacidades: [
-    { nombre: "Fotografía", donde: ["foto", "racing"] },
+    { nombre: "Fotografía", donde: ["foto", "racing", "gobierno"] },
     { nombre: "Diseño y composición visual", donde: ["foto"] },
     { nombre: "Marketing", donde: ["marketing"] },
     { nombre: "Publicidad", donde: ["marketing"] },
