@@ -11,7 +11,7 @@ Todo el contenido está en **`contenido.js`**. Lo marcado con `←` está pendie
 - **Fotos:** súbelas a `assets/fotos/` (mejor `.webp` o `.jpg` de unos 1600 px de lado).
 - **Trayectoria:** experiencia y formación en `trayectoria`.
 - **Capacidades:** en `capacidades`, cada una enlazada a los puntos de la trayectoria donde la aprendiste (`donde`).
-- **CV:** sube el PDF como `assets/cv.pdf` y escribe `cv: "assets/cv.pdf"`.
+- **CV:** el PDF está en `assets/cv-jairo-martinez.pdf`. Para cambiarlo, sustituye ese archivo.
 - **Vídeo:** súbelo a YouTube como "oculto" y pega su ID en `youtubeId`.
 
 ## Técnica

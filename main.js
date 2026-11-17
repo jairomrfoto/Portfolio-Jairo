@@ -274,6 +274,11 @@
   enlace("LinkedIn", C.linkedin);
   enlace("Instagram", C.instagram);
   if (C.cv) enlace("Descargar CV en PDF", C.cv, { download: "" });
+  $$("[data-cv-enlace]").forEach((a) => {
+    if (!C.cv) return;
+    a.href = C.cv;
+    a.hidden = false;
+  });
 
   /* ---------- Menú móvil ---------- */
   const menuBoton = $(".menu-boton");
@@ -393,7 +398,7 @@
     ultimoY = y;
 
     // Enlace de navegación activo
-    $$(".nav a").forEach((a) => {
+    $$('.nav a[href^="#"]').forEach((a) => {
       const s = $(a.getAttribute("href"));
       const b = s?.getBoundingClientRect();
       a.setAttribute("aria-current", String(!!b && b.top < vh * 0.4 && b.bottom > vh * 0.4));

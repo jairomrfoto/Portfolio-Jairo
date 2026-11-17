@@ -7,15 +7,15 @@
 
 const CONTENIDO = {
   nombre: "Jairo",                                  // ← nombre completo si quieres
-  fotoPortada: "assets/retrato.webp",               // ← tu foto (vertical, ~1200×1500 px)
+  fotoPortada: "assets/jairo-portada.webp",         // foto recortada, sin fondo (PNG/WebP con transparencia)
 
   // Frase corta bajo el nombre
   frase: "Fotografía, marketing y comercio internacional. Acostumbrado a liderar equipos y a trabajar en otros idiomas.",
 
-  email: "tu@email.com",                            // ← tu email
+  email: "jairomrfoto@gmail.com",
   linkedin: "",                                     // ← URL de tu LinkedIn (vacío = no se muestra)
   instagram: "https://www.instagram.com/jairomrfoto",
-  cv: "",                                           // ← "assets/cv.pdf" cuando subas el PDF (vacío = botón oculto)
+  cv: "assets/cv-jairo-martinez.pdf",             // CV en PDF (vacío = botones ocultos)
   youtubeId: "",                                    // ← ID del vídeo de presentación en YouTube (opcional)
 
   // ---------- Sobre mí: los tres pilares ----------
@@ -63,6 +63,25 @@ const CONTENIDO = {
         { src: "assets/fotos/gob-03.webp", pie: "Firma en la sede del Gobierno de Cantabria" },
         { src: "assets/fotos/gob-04.webp", pie: "Asistentes antes del inicio de un acto" },
         { src: "assets/fotos/gob-05.webp", pie: "Inauguración de la exposición homenaje «Año Orallo 2023»" },
+      ],
+    },
+    {
+      titulo: "Xsoccer",
+      disciplina: "Marketing",
+      anio: "2023 – 2025",
+      resumen: "Marca de espinilleras de fútbol personalizadas creada desde cero, de la importación de la materia prima a la venta online.",
+      rol: "Cofundador: naming, diseño gráfico, marca, tienda online y redes sociales.",   // ← revisa
+      enlace: { texto: "Ver xsoccer.es", url: "https://xsoccer.es" },
+      secciones: [
+        { titulo: "El proyecto",
+          texto: "Creamos una marca de espinilleras personalizadas para futbolistas. Importamos la materia prima desde China e incorporamos la maquinaria necesaria para producir cada pedido nosotros mismos. Yo me encargué del diseño gráfico de cada espinillera a partir de las fotos de los clientes." },
+        { titulo: "Naming y producto",
+          texto: "Elegimos el nombre Xsoccer y construimos un sistema alrededor de la X: Espinillera X, Mini X, XTape, XSocks y el KIT XSC. Así la marca se reconoce en todo el catálogo y es fácil ampliarlo. También creamos una línea para equipos y clubes." },
+        { titulo: "Venta y comunidad",
+          texto: "Tienda online propia en xsoccer.es, con personalización subiendo tus fotos, entrega en 2 o 3 días laborables y atención por WhatsApp Business. Abrimos Instagram y TikTok (@xsoccer.es) para enseñar los diseños de los clientes y generar comunidad." },
+      ],
+      imagenes: [
+        { src: "assets/proyectos/xsoccer/proceso.webp", pie: "Proceso de trabajo y sistema de naming" },
       ],
     },
     {
@@ -169,6 +188,14 @@ const CONTENIDO = {
         "Planificación de entrenamientos, gestión de la plantilla y preparación de partidos",
         "Comunicación con jugadores, familias y cuerpo técnico",
       ] },
+    { id: "xsoccer", tipo: "experiencia", fechas: "2023 – 2025",
+      titulo: "Cofundador de Xsoccer", lugar: "Revilla de Camargo, Cantabria",
+      texto: "Marca de espinilleras de fútbol personalizadas con producción propia y venta online.",
+      puntos: [
+        "Importación de materia prima desde China y producción con maquinaria propia",
+        "Naming, identidad y diseño gráfico de cada pedido",
+        "Tienda online, Instagram, TikTok y atención al cliente por WhatsApp Business",
+      ] },
     { id: "proyectos", tipo: "experiencia", fechas: "2026",
       titulo: "Proyectos propios de producto y marca", lugar: "Komix, Fauniverse y Kamplay",
       texto: "Lanzamiento de productos digitales propios: idea, naming, identidad visual, estrategia y desarrollo apoyado en herramientas de IA.",
@@ -195,11 +222,11 @@ const CONTENIDO = {
   // "donde": ids de la trayectoria donde aprendiste o usaste cada capacidad
   capacidades: [
     { nombre: "Fotografía", donde: ["foto", "racing", "gobierno"] },
-    { nombre: "Diseño y composición visual", donde: ["foto"] },
-    { nombre: "Marketing", donde: ["marketing", "proyectos"] },
+    { nombre: "Diseño y composición visual", donde: ["foto", "xsoccer"] },
+    { nombre: "Marketing", donde: ["marketing", "proyectos", "xsoccer"] },
     { nombre: "Branding y naming", donde: ["proyectos", "marketing"] },
     { nombre: "Publicidad", donde: ["marketing"] },
-    { nombre: "Comercio internacional", donde: ["comercio"] },
+    { nombre: "Comercio internacional", donde: ["comercio", "xsoccer"] },
     { nombre: "Liderazgo de equipos", donde: ["futbol"] },
     { nombre: "Comunicación", donde: ["futbol", "marketing"] },
     { nombre: "Entornos internacionales", donde: ["eeuu", "comercio"] },
