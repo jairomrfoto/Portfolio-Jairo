@@ -36,14 +36,17 @@ const CONTENIDO = {
   // imagenes: fotos que se ven al abrir el proyecto (la primera es la portada)
   trabajos: [
     {
-      titulo: "Moda Real Racing Club",
+      titulo: "Real Racing Club de Santander",
       disciplina: "Fotografía",
-      anio: "",                                              // ← año de la sesión
-      resumen: "Sesión de fotografía de moda con prendas del Real Racing Club de Santander.", // ← ¿encargo? ¿para quién?
+      anio: "2024",
+      resumen:
+        "Sesión de fotografía de moda para el Real Racing Club de Santander, realizada durante mis prácticas en el club. " +
+        "Prendas del club fotografiadas en exteriores de la costa cántabra y en interior.",
       imagenes: [
-        { src: "assets/fotos/moda-racing-01.webp", pie: "Camisetas del Real Racing Club entre los pinos, junto al mar" },
-        { src: "assets/fotos/moda-racing-02.webp", pie: "Retrato con polo negro del Racing" },
-        { src: "assets/fotos/moda-racing-03.webp", pie: "Retrato con polo blanco y verde del Racing" },
+        { src: "assets/fotos/moda-racing-01.webp", pie: "Camisetas del Racing entre los pinos, junto al mar" },
+        { src: "assets/fotos/moda-racing-04.webp", pie: "Camiseta del Racing en interior" },
+        { src: "assets/fotos/moda-racing-02.webp", pie: "Polo negro del Racing" },
+        { src: "assets/fotos/moda-racing-03.webp", pie: "Polo blanco y verde del Racing" },
       ],
     },
     {
@@ -94,6 +97,10 @@ const CONTENIDO = {
         "Planificación de entrenamientos, gestión de la plantilla y preparación de partidos",
         "Comunicación con jugadores, familias y cuerpo técnico",
       ] },
+    { id: "racing", tipo: "experiencia", fechas: "2024",
+      titulo: "Prácticas en el Real Racing Club de Santander", lugar: "Santander",
+      texto: "Prácticas en el club, donde realicé sesiones de fotografía de moda con sus prendas.",
+      puntos: ["Fotografía de moda para el club en exteriores e interiores"] },
     { id: "eeuu", tipo: "experiencia", fechas: "Veranos 20XX y 20XX", // ← años
       titulo: "Trabajo de verano en Estados Unidos", lugar: "Empresa o lugar, ciudad",  // ← completa
       texto: "Dos temporadas trabajando en Estados Unidos en un entorno 100 % en inglés." },
@@ -106,7 +113,7 @@ const CONTENIDO = {
   // ---------- Capacidades ----------
   // "donde": ids de la trayectoria donde aprendiste o usaste cada capacidad
   capacidades: [
-    { nombre: "Fotografía", donde: ["foto"] },
+    { nombre: "Fotografía", donde: ["foto", "racing"] },
     { nombre: "Diseño y composición visual", donde: ["foto"] },
     { nombre: "Marketing", donde: ["marketing"] },
     { nombre: "Publicidad", donde: ["marketing"] },
