@@ -9,8 +9,8 @@ const CONTENIDO = {
   // Foto principal (portada): sube tu foto como assets/foto-portada.jpg o cambia la ruta
   fotoPortada: "assets/retrato.webp",
   // Tu frase de presentación
-  frase: "Estudiante de comercio internacional con formación en marketing, publicidad y fotografía.",
-  disciplinas: ["Comercio internacional", "Marketing y branding", "Fotografía"],
+  frase: "Comercio internacional, marketing y fotografía. Acostumbrado a liderar equipos y a trabajar en otros idiomas.",
+  disciplinas: ["Comercio internacional", "Marketing y publicidad", "Fotografía", "Liderazgo de equipos"],
 
   // Vídeo de presentación (opcional): súbelo a YouTube como "oculto" y pega aquí su ID
   // (lo que va después de "v=" en la URL). Si lo dejas vacío, la sección no aparece.
@@ -26,31 +26,26 @@ const CONTENIDO = {
   // si no tienes, borra la línea "imagen".
   experiencia: [
     {
-      puesto: "Puesto o proyecto",
-      lugar: "Empresa, cliente o centro de estudios",
-      fechas: "2025 – 2026",
-      descripcion: "Qué hacías allí, en una o dos frases.",
+      puesto: "Entrenador de fútbol",
+      lugar: "Club o clubes donde has entrenado",        // ← pon el nombre
+      fechas: "20XX – 2026",                            // ← ajusta las fechas
+      descripcion:
+        "Entrenador de equipos de todas las edades, desde niños de 5 años hasta categoría senior en Tercera División.",
       logros: [
-        "Una tarea o logro concreto",
-        "Otra tarea o logro concreto",
+        "Dirección de grupos muy distintos: de la iniciación infantil al fútbol semiprofesional",
+        "Planificación de entrenamientos, gestión de la plantilla y preparación de partidos",
+        "Comunicación con jugadores, familias y cuerpo técnico",
       ],
-      imagen: "assets/proyectos/proyecto-1.webp",
     },
     {
-      puesto: "Puesto o proyecto",
-      lugar: "Empresa, cliente o centro de estudios",
-      fechas: "2024",
-      descripcion: "Qué hacías allí, en una o dos frases.",
-      logros: ["Una tarea o logro concreto", "Otra tarea o logro concreto"],
-      imagen: "assets/proyectos/proyecto-2.webp",
-    },
-    {
-      puesto: "Puesto o proyecto",
-      lugar: "Empresa, cliente o centro de estudios",
-      fechas: "2023",
-      descripcion: "Qué hacías allí, en una o dos frases.",
-      logros: ["Una tarea o logro concreto"],
-      imagen: "assets/proyectos/proyecto-3.webp",
+      puesto: "Trabajo de verano en Estados Unidos",    // ← pon el puesto concreto
+      lugar: "Empresa o lugar, ciudad (EE. UU.)",       // ← pon dónde fue
+      fechas: "Veranos 20XX y 20XX",                    // ← ajusta los años
+      descripcion: "Dos temporadas trabajando en Estados Unidos en un entorno 100 % en inglés.",
+      logros: [
+        "Qué hacías allí (tareas concretas)",           // ← completa
+        "Adaptación a otra cultura y forma de trabajar",
+      ],
     },
   ],
 
@@ -69,13 +64,16 @@ const CONTENIDO = {
 
   // ---------- Sobre mí ----------
   sobreMi:
-    "Escribe aquí dos o tres frases sobre ti: qué te mueve, qué tipo de empresa buscas " +
-    "y qué aportas que otros perfiles no.",
+    "Me he formado en tres áreas que se complementan: la fotografía y el diseño me dan el ojo visual, " +
+    "el marketing y la publicidad me enseñaron a comunicar una marca, y el comercio internacional, " +
+    "que estoy terminando, me prepara para llevarla fuera. Fuera de las aulas, años como entrenador " +
+    "de fútbol me han enseñado a liderar grupos, y dos veranos trabajando en Estados Unidos, a " +
+    "desenvolverme en otro idioma y otra cultura.",
   formacion: [
-    { anio: "2026", titulo: "Comercio Internacional", centro: "Centro de estudios" },
-    { anio: "20XX", titulo: "Marketing y Publicidad", centro: "Centro de estudios" },
-    { anio: "20XX", titulo: "Fotografía", centro: "Centro de estudios" },
+    { anio: "2026", titulo: "Comercio Internacional", centro: "Centro de estudios" },          // ← centro
+    { anio: "20XX", titulo: "Marketing y Publicidad", centro: "Centro de estudios" },          // ← año y centro
+    { anio: "20XX", titulo: "Fotografía (Artes Plásticas y Diseño)", centro: "Centro de estudios" },
   ],
-  idiomas: ["Español: nativo", "Inglés: nivel", "Otro idioma: nivel"],
+  idiomas: ["Español: nativo", "Inglés: nivel avanzado", "Francés: nivel intermedio"],
   herramientas: ["Adobe Lightroom", "Photoshop", "Illustrator", "Meta Ads", "Canva", "Excel"],
 };
