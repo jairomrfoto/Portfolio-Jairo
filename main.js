@@ -89,7 +89,7 @@
     if (t.imagenes.length > 1) fig.append(el("span", "tarjeta-cuantas", `${t.imagenes.length} imágenes`));
     const info = el("div", "tarjeta-info");
     const meta = el("span", "tarjeta-meta");
-    meta.append(el("b", null, t.disciplina), document.createTextNode(`, ${t.anio}`));
+    meta.append(el("b", null, t.disciplina), document.createTextNode(t.anio ? `, ${t.anio}` : ""));
     info.append(el("span", "tarjeta-titulo", t.titulo), meta);
     b.append(fig, info);
     b.addEventListener("click", () => abrirFicha(t));
@@ -126,7 +126,7 @@
     origenFicha = document.activeElement;
     const meta = $("[data-ficha-meta]");
     meta.textContent = "";
-    meta.append(el("b", null, t.disciplina), document.createTextNode(`, ${t.anio}`));
+    meta.append(el("b", null, t.disciplina), document.createTextNode(t.anio ? `, ${t.anio}` : ""));
     $("[data-ficha-titulo]").textContent = t.titulo;
     $("[data-ficha-resumen]").textContent = t.resumen;
     const cont = $("[data-ficha-imagenes]");

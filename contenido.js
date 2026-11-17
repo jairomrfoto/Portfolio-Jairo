@@ -36,15 +36,14 @@ const CONTENIDO = {
   // imagenes: fotos que se ven al abrir el proyecto (la primera es la portada)
   trabajos: [
     {
-      titulo: "Selección fotográfica",
+      titulo: "Moda Real Racing Club",
       disciplina: "Fotografía",
-      anio: "2026",
-      resumen: "Una selección de mis fotografías.",           // ← describe la serie
+      anio: "",                                              // ← año de la sesión
+      resumen: "Sesión de fotografía de moda con prendas del Real Racing Club de Santander.", // ← ¿encargo? ¿para quién?
       imagenes: [
-        { src: "assets/fotos/foto-01.webp", pie: "Pie de foto" },
-        { src: "assets/fotos/foto-02.webp", pie: "Pie de foto" },
-        { src: "assets/fotos/foto-03.webp", pie: "Pie de foto" },
-        { src: "assets/fotos/foto-04.webp", pie: "Pie de foto" },
+        { src: "assets/fotos/moda-racing-01.webp", pie: "Camisetas del Real Racing Club entre los pinos, junto al mar" },
+        { src: "assets/fotos/moda-racing-02.webp", pie: "Retrato con polo negro del Racing" },
+        { src: "assets/fotos/moda-racing-03.webp", pie: "Retrato con polo blanco y verde del Racing" },
       ],
     },
     {
