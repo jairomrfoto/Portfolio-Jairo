@@ -1,14 +1,22 @@
 # Portfolio de Jairo
 
-Web personal y currículum: experiencia, fotografía y formación.
+Web personal y currículum: fotografía, marketing, publicidad y comercio internacional.
+Publicada con GitHub Pages en https://jairomrfoto.github.io/Portfolio-Jairo/
 
 ## Cómo editarla
-- **Textos, experiencia y fotos:** todo está en `contenido.js`.
-- **Fotos:** súbelas a `assets/fotos/` y añádelas a la lista `fotos` de `contenido.js`.
-- **Foto de portada:** cámbiala en `fotoPortada` de `contenido.js`.
-- **Imágenes de experiencia (opcionales):** en `assets/proyectos/`.
-- **CV:** sube tu PDF como `assets/cv.pdf`.
+Todo el contenido está en **`contenido.js`**. Lo marcado con `←` está pendiente de completar.
+
+- **Tu foto de portada:** súbela a `assets/` y cambia `fotoPortada`.
+- **Proyectos (sección Trabajo):** añade o edita entradas en `trabajos`. Cada proyecto tiene título, disciplina (Fotografía, Marketing o Publicidad), año, resumen y sus imágenes. Los filtros se crean solos.
+- **Fotos:** súbelas a `assets/fotos/` (mejor `.webp` o `.jpg` de unos 1600 px de lado).
+- **Trayectoria:** experiencia y formación en `trayectoria`.
+- **Capacidades:** en `capacidades`, cada una enlazada a los puntos de la trayectoria donde la aprendiste (`donde`).
+- **CV:** sube el PDF como `assets/cv.pdf` y escribe `cv: "assets/cv.pdf"`.
 - **Vídeo:** súbelo a YouTube como "oculto" y pega su ID en `youtubeId`.
+
+## Técnica
+HTML, CSS y JavaScript sin dependencias ni proceso de compilación. Tipografía Bricolage Grotesque
+(licencia OFL) alojada en `assets/fuentes/`. Las animaciones se desactivan si el sistema pide reducir movimiento.
 
 ## Dominio propio
 1. En tu proveedor de dominio añade 4 registros **A** para `@`: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153

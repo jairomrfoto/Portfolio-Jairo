@@ -2,107 +2,176 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jairo · Comercio internacional, marketing y fotografía</title>
-  <meta name="description" content="Portfolio y currículum de Jairo: comercio internacional, marketing, branding y fotografía.">
-  <meta property="og:title" content="Jairo · Portfolio">
-  <meta property="og:description" content="Comercio internacional, marketing y fotografía.">
-  <meta property="og:image" content="assets/proyectos/proyecto-1.webp">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000000'/><text x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23E10600'>J</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jairo · Fotografía, marketing y comercio internacional</title>
+  <meta name="description" content="Portfolio y currículum de Jairo: fotografía, marketing, publicidad y comercio internacional. Experiencia liderando equipos y trabajando en Estados Unidos.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://jairomrfoto.github.io/Portfolio-Jairo/">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Jairo · Fotografía, marketing y comercio internacional">
+  <meta property="og:description" content="Portfolio y currículum de Jairo.">
+  <meta property="og:url" content="https://jairomrfoto.github.io/Portfolio-Jairo/">
+  <meta property="og:image" content="https://jairomrfoto.github.io/Portfolio-Jairo/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fuentes/bricolage.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="estilos.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jairo",
+    "url": "https://jairomrfoto.github.io/Portfolio-Jairo/",
+    "jobTitle": "Fotografía, marketing y comercio internacional",
+    "knowsAbout": ["Fotografía", "Marketing", "Publicidad", "Comercio internacional", "Liderazgo de equipos"],
+    "knowsLanguage": ["es", "en", "fr"],
+    "sameAs": ["https://www.instagram.com/jairomrfoto"]
+  }
+  </script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="saltar" href="#contenido">Ir al contenido</a>
 
-  <header class="cabecera">
-    <a class="marca" href="#inicio" data-nombre>Jairo</a>
-    <nav aria-label="Principal">
-      <a href="#experiencia">Experiencia</a>
-      <a href="#fotografia">Fotografía</a>
+  <!-- Cursor de enfoque (solo con ratón) -->
+  <div class="cursor oculto" aria-hidden="true">
+    <span class="esq tl"></span><span class="esq tr"></span><span class="esq bl"></span><span class="esq br"></span>
+    <span class="cursor-texto"></span>
+  </div>
+
+  <header class="cab">
+    <a class="logo" href="#inicio" aria-label="Inicio">
+      <span class="logo-marca" aria-hidden="true"><i></i><i></i><i></i><i></i>J</span>
+      <span data-nombre>Jairo</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#trabajo">Trabajo</a>
       <a href="#sobre-mi">Sobre mí</a>
-      <a class="nav-cv" data-cv href="assets/cv.pdf" download>Descargar CV</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#contacto" class="nav-cta">Contacto</a>
     </nav>
+    <button class="menu-boton" aria-expanded="false" aria-controls="menu-movil">Menú</button>
   </header>
 
+  <div class="menu-movil" id="menu-movil" hidden>
+    <nav aria-label="Menú">
+      <a href="#trabajo">Trabajo</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#capacidades">Capacidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+
   <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="hero-texto">
-        <h1 class="hero-nombre" data-nombre>Jairo</h1>
-        <p class="hero-frase" data-frase></p>
-        <ul class="disciplinas" data-disciplinas></ul>
+    <!-- PORTADA -->
+    <section class="hero" id="inicio" aria-label="Presentación">
+      <div class="hero-fijo">
+        <div class="hero-texto">
+          <p class="hero-frase" data-frase></p>
+          <a class="hero-explorar" href="#trabajo" data-cursor="Ver">
+            <span>Ver mi trabajo</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
+        </div>
+        <figure class="hero-foto visor">
+          <img data-foto-portada alt="" fetchpriority="high">
+          <span class="esq tl"></span><span class="esq tr"></span><span class="esq bl"></span><span class="esq br"></span>
+        </figure>
+        <h1 class="hero-nombre" data-nombre-grande>Jairo</h1>
       </div>
-      <img class="hero-foto" data-foto-portada alt="" fetchpriority="high">
     </section>
 
-    <div class="tira-marco" aria-hidden="true"><div class="tira" data-tira></div></div>
-
-    <section class="seccion seccion-video" id="video" aria-labelledby="t-video" data-seccion-video hidden>
-      <h2 id="t-video">Me presento en 90 segundos</h2>
-      <div class="video" data-video></div>
-    </section>
-
-    <section class="seccion" id="experiencia" aria-labelledby="t-exp">
-      <div class="seccion-cab">
-        <h2 id="t-exp">Experiencia</h2>
+    <!-- SOBRE MÍ -->
+    <section class="sobre" id="sobre-mi" aria-labelledby="t-sobre">
+      <h2 class="titulo-seccion" id="t-sobre" data-reveal-texto>Tres maneras de mirar un mismo proyecto</h2>
+      <ol class="pilares" data-pilares></ol>
+      <div class="sobre-cierre">
+        <p class="sobre-texto" data-sobre data-reveal></p>
+        <dl class="idiomas" data-idiomas data-reveal></dl>
       </div>
-      <div class="experiencia" data-experiencia></div>
     </section>
 
-    <section class="seccion seccion-oscura" id="fotografia" aria-labelledby="t-foto">
-      <div class="seccion-cab">
-        <h2 id="t-foto">Fotografía</h2>
-        <p>Una selección corta. Pulsa una foto para verla en grande.</p>
+    <!-- TRABAJO -->
+    <section class="trabajo" id="trabajo" aria-labelledby="t-trabajo">
+      <div class="trabajo-fijo">
+        <div class="trabajo-cab">
+          <h2 class="titulo-seccion" id="t-trabajo">Trabajo</h2>
+          <div class="filtros" role="group" aria-label="Filtrar por disciplina" data-filtros></div>
+        </div>
+        <div class="pista-marco">
+          <ul class="pista" data-pista></ul>
+        </div>
+        <div class="trabajo-progreso" aria-hidden="true"><span data-progreso></span></div>
       </div>
-      <div class="galeria" data-galeria></div>
     </section>
 
-    <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
-      <div class="sobre">
-        <div>
-          <h2 id="t-sobre">Sobre mí</h2>
-          <p class="sobre-texto" data-sobre></p>
-          <div class="sobre-columnas">
-            <div>
-              <h3>Formación</h3>
-              <ol class="formacion" data-formacion></ol>
-            </div>
-            <div>
-              <h3>Idiomas</h3>
-              <ul class="lista" data-idiomas></ul>
-              <h3>Herramientas</h3>
-              <ul class="etiquetas" data-herramientas></ul>
-            </div>
-          </div>
+    <!-- VÍDEO (solo si hay) -->
+    <section class="video-seccion" id="video" aria-labelledby="t-video" data-seccion-video hidden>
+      <h2 class="titulo-seccion" id="t-video">Me presento en 90 segundos</h2>
+      <div class="video visor" data-video>
+        <span class="esq tl"></span><span class="esq tr"></span><span class="esq bl"></span><span class="esq br"></span>
+      </div>
+    </section>
+
+    <!-- TRAYECTORIA -->
+    <section class="trayectoria" id="trayectoria" aria-labelledby="t-tray">
+      <div class="trayectoria-cab">
+        <h2 class="titulo-seccion" id="t-tray" data-reveal-texto>Trayectoria</h2>
+        <div class="filtros" role="group" aria-label="Filtrar trayectoria" data-filtros-tray>
+          <button aria-pressed="true" data-tipo="todo">Todo</button>
+          <button aria-pressed="false" data-tipo="experiencia">Experiencia</button>
+          <button aria-pressed="false" data-tipo="formacion">Formación</button>
         </div>
       </div>
+      <div class="linea-tiempo">
+        <span class="linea-tiempo-eje" aria-hidden="true"><span data-eje></span></span>
+        <ol data-trayectoria></ol>
+      </div>
     </section>
 
-    <section class="contacto" id="contacto" aria-labelledby="t-contacto">
-      <h2 id="t-contacto">¿Hablamos?</h2>
-      <a class="contacto-email" data-email href="#"></a>
-      <div class="contacto-enlaces">
-        <a data-cv href="assets/cv.pdf" download class="boton">Descargar CV en PDF</a>
-        <a data-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a data-instagram href="#" target="_blank" rel="noopener">Instagram</a>
+    <!-- CAPACIDADES -->
+    <section class="capacidades" id="capacidades" aria-labelledby="t-cap">
+      <div class="capacidades-cab">
+        <h2 class="titulo-seccion" id="t-cap" data-reveal-texto>Capacidades</h2>
+        <p class="capacidades-ayuda">Elige una para ver dónde la he aprendido o puesto en práctica.</p>
       </div>
+      <div class="capacidades-cuerpo">
+        <ul class="muro" data-capacidades></ul>
+        <div class="evidencia" aria-live="polite" data-evidencia></div>
+      </div>
+      <div class="herramientas" data-herramientas-bloque hidden>
+        <h3>Herramientas</h3>
+        <ul data-herramientas></ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto" aria-labelledby="t-contacto">
+      <h2 class="contacto-titulo" id="t-contacto" data-reveal-texto>Hablemos</h2>
+      <p class="contacto-sub">Si buscas a alguien que una mirada visual, comunicación y visión internacional, escríbeme.</p>
+      <a class="iman" data-email data-iman href="#"><span>Escríbeme</span></a>
+      <ul class="contacto-enlaces" data-enlaces></ul>
     </section>
   </main>
 
   <footer class="pie">
-    <span data-nombre>Jairo</span>, <span data-anio></span>
+    <span><span data-nombre>Jairo</span>, <span data-anio></span></span>
+    <a href="#inicio">Volver arriba</a>
   </footer>
 
-  <dialog class="visor" data-visor aria-label="Foto ampliada">
-    <button class="visor-cerrar" data-cerrar aria-label="Cerrar">×</button>
-    <button class="visor-nav visor-ant" data-ant aria-label="Foto anterior">‹</button>
-    <figure>
-      <img data-visor-img alt="">
-      <figcaption data-visor-pie></figcaption>
-    </figure>
-    <button class="visor-nav visor-sig" data-sig aria-label="Foto siguiente">›</button>
+  <!-- Ficha de proyecto -->
+  <dialog class="ficha" data-ficha aria-labelledby="ficha-titulo">
+    <div class="ficha-interior">
+      <header class="ficha-cab">
+        <p class="ficha-meta" data-ficha-meta></p>
+        <h2 id="ficha-titulo" data-ficha-titulo></h2>
+        <p class="ficha-resumen" data-ficha-resumen></p>
+        <button class="ficha-cerrar" data-ficha-cerrar>Cerrar</button>
+      </header>
+      <div class="ficha-imagenes" data-ficha-imagenes></div>
+    </div>
   </dialog>
 
   <script src="contenido.js"></script>
