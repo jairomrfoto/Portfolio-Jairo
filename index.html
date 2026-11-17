@@ -8,7 +8,7 @@
   <meta property="og:title" content="Jairo · Portfolio">
   <meta property="og:description" content="Comercio internacional, marketing y fotografía.">
   <meta property="og:image" content="assets/proyectos/proyecto-1.webp">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231D2733'/><text x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23E8B931'>J</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000000'/><text x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23E10600'>J</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
   <header class="cabecera">
     <a class="marca" href="#inicio" data-nombre>Jairo</a>
     <nav aria-label="Principal">
-      <a href="#proyectos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
       <a href="#fotografia">Fotografía</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a class="nav-cv" data-cv href="assets/cv.pdf" download>Descargar CV</a>
@@ -30,21 +30,25 @@
   <main id="contenido">
     <section class="hero" id="inicio">
       <div class="hero-texto">
-        <h1 data-titular></h1>
-        <p class="hero-intro" data-intro></p>
+        <h1 class="hero-nombre" data-nombre>Jairo</h1>
+        <p class="hero-frase" data-frase></p>
         <ul class="disciplinas" data-disciplinas></ul>
       </div>
-      <div class="hero-video" data-video></div>
+      <img class="hero-foto" data-foto-portada alt="" fetchpriority="high">
     </section>
 
     <div class="tira-marco" aria-hidden="true"><div class="tira" data-tira></div></div>
 
-    <section class="seccion" id="proyectos" aria-labelledby="t-proyectos">
+    <section class="seccion seccion-video" id="video" aria-labelledby="t-video" data-seccion-video hidden>
+      <h2 id="t-video">Me presento en 90 segundos</h2>
+      <div class="video" data-video></div>
+    </section>
+
+    <section class="seccion" id="experiencia" aria-labelledby="t-exp">
       <div class="seccion-cab">
-        <h2 id="t-proyectos">Proyectos de marketing y branding</h2>
-        <p>Cada proyecto, contado como lo explicaría en una entrevista: el problema, lo que hice y lo que salió.</p>
+        <h2 id="t-exp">Experiencia</h2>
       </div>
-      <div class="proyectos" data-proyectos></div>
+      <div class="experiencia" data-experiencia></div>
     </section>
 
     <section class="seccion seccion-oscura" id="fotografia" aria-labelledby="t-foto">
@@ -57,7 +61,6 @@
 
     <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
       <div class="sobre">
-        <img class="retrato" data-retrato alt="Retrato de Jairo" loading="lazy">
         <div>
           <h2 id="t-sobre">Sobre mí</h2>
           <p class="sobre-texto" data-sobre></p>

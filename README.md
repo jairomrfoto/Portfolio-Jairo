@@ -1,11 +1,12 @@
 # Portfolio de Jairo
 
-Web personal: comercio internacional, marketing y fotografía.
+Web personal y currículum: experiencia, fotografía y formación.
 
 ## Cómo editarla
-- **Textos, proyectos y fotos:** todo está en `contenido.js`.
+- **Textos, experiencia y fotos:** todo está en `contenido.js`.
 - **Fotos:** súbelas a `assets/fotos/` y añádelas a la lista `fotos` de `contenido.js`.
-- **Imágenes de proyectos:** en `assets/proyectos/`.
+- **Foto de portada:** cámbiala en `fotoPortada` de `contenido.js`.
+- **Imágenes de experiencia (opcionales):** en `assets/proyectos/`.
 - **CV:** sube tu PDF como `assets/cv.pdf`.
 - **Vídeo:** súbelo a YouTube como "oculto" y pega su ID en `youtubeId`.
 

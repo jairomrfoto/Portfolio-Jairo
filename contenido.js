@@ -6,14 +6,14 @@
 
 const CONTENIDO = {
   nombre: "Jairo",                       // ← tu nombre completo
-  titular: "Llevo marcas a nuevos mercados y me encargo de que se vean bien al llegar.",
-  intro:
-    "Comercio internacional, marketing y fotografía. Entiendo cómo se vende fuera, " +
-    "sé construir una marca para ese mercado y produzco el contenido visual yo mismo.",
+  // Foto principal (portada): sube tu foto como assets/foto-portada.jpg o cambia la ruta
+  fotoPortada: "assets/retrato.webp",
+  // Tu frase de presentación
+  frase: "Estudiante de comercio internacional con formación en marketing, publicidad y fotografía.",
   disciplinas: ["Comercio internacional", "Marketing y branding", "Fotografía"],
 
-  // Vídeo de presentación: sube el vídeo a YouTube como "oculto" y pega aquí su ID
-  // (lo que va después de "v=" en la URL). Déjalo vacío para mostrar un aviso.
+  // Vídeo de presentación (opcional): súbelo a YouTube como "oculto" y pega aquí su ID
+  // (lo que va después de "v=" en la URL). Si lo dejas vacío, la sección no aparece.
   youtubeId: "",
 
   email: "tu@email.com",
@@ -21,31 +21,36 @@ const CONTENIDO = {
   instagram: "https://www.instagram.com/jairomrfoto",
   cv: "assets/cv.pdf",                   // ← sube tu CV en PDF con este nombre
 
-  // ---------- Proyectos de marketing y branding ----------
-  proyectos: [
+  // ---------- Experiencia previa ----------
+  // Trabajos, prácticas, proyectos de clase o encargos. La imagen es opcional:
+  // si no tienes, borra la línea "imagen".
+  experiencia: [
     {
-      titulo: "Nombre del proyecto 1",
-      tipo: "Branding · Lanzamiento internacional",
+      puesto: "Puesto o proyecto",
+      lugar: "Empresa, cliente o centro de estudios",
+      fechas: "2025 – 2026",
+      descripcion: "Qué hacías allí, en una o dos frases.",
+      logros: [
+        "Una tarea o logro concreto",
+        "Otra tarea o logro concreto",
+      ],
       imagen: "assets/proyectos/proyecto-1.webp",
-      reto: "Qué problema tenía la marca o el cliente. Una o dos frases.",
-      hice: "Qué hiciste tú: estrategia, identidad visual, fotografía, plan de mercado…",
-      resultado: "Qué se consiguió. Si hay un dato (ventas, alcance, nota), ponlo aquí.",
     },
     {
-      titulo: "Nombre del proyecto 2",
-      tipo: "Identidad visual · Redes sociales",
+      puesto: "Puesto o proyecto",
+      lugar: "Empresa, cliente o centro de estudios",
+      fechas: "2024",
+      descripcion: "Qué hacías allí, en una o dos frases.",
+      logros: ["Una tarea o logro concreto", "Otra tarea o logro concreto"],
       imagen: "assets/proyectos/proyecto-2.webp",
-      reto: "Qué problema tenía la marca o el cliente.",
-      hice: "Qué hiciste tú.",
-      resultado: "Qué se consiguió.",
     },
     {
-      titulo: "Nombre del proyecto 3",
-      tipo: "Plan de exportación · Marketing",
+      puesto: "Puesto o proyecto",
+      lugar: "Empresa, cliente o centro de estudios",
+      fechas: "2023",
+      descripcion: "Qué hacías allí, en una o dos frases.",
+      logros: ["Una tarea o logro concreto"],
       imagen: "assets/proyectos/proyecto-3.webp",
-      reto: "Qué problema tenía la marca o el cliente.",
-      hice: "Qué hiciste tú.",
-      resultado: "Qué se consiguió.",
     },
   ],
 
@@ -63,7 +68,6 @@ const CONTENIDO = {
   ],
 
   // ---------- Sobre mí ----------
-  retrato: "assets/retrato.webp",
   sobreMi:
     "Escribe aquí dos o tres frases sobre ti: qué te mueve, qué tipo de empresa buscas " +
     "y qué aportas que otros perfiles no.",

@@ -12,25 +12,22 @@
   // Textos básicos
   $$("[data-nombre]").forEach((n) => (n.textContent = C.nombre));
   document.title = `${C.nombre} · ${C.disciplinas.join(", ")}`;
-  $("[data-titular]").textContent = C.titular;
-  $("[data-intro]").textContent = C.intro;
+  $("[data-frase]").textContent = C.frase;
+  const portada = $("[data-foto-portada]");
+  portada.src = C.fotoPortada;
+  portada.alt = `Foto de ${C.nombre}`;
   C.disciplinas.forEach((d) => $("[data-disciplinas]").append(el("li", null, d)));
   $("[data-anio]").textContent = new Date().getFullYear();
 
-  // Vídeo
-  const video = $("[data-video]");
+  // Vídeo (solo si hay ID de YouTube)
   if (C.youtubeId) {
     const f = document.createElement("iframe");
     f.src = `https://www.youtube-nocookie.com/embed/${C.youtubeId}?rel=0`;
     f.title = `Presentación de ${C.nombre}`;
     f.allow = "accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen";
     f.loading = "lazy";
-    video.append(f);
-  } else {
-    video.classList.add("video-vacio");
-    video.innerHTML =
-      '<span class="play" aria-hidden="true"></span>' +
-      "<p><strong>Vídeo de presentación</strong><br>90 segundos sobre quién soy y qué aporto.</p>";
+    $("[data-video]").append(f);
+    $("[data-seccion-video]").hidden = false;
   }
 
   // Tira de película con las fotos
@@ -46,23 +43,28 @@
     tira.append(marco);
   });
 
-  // Proyectos
-  const cont = $("[data-proyectos]");
-  C.proyectos.forEach((p) => {
-    const art = el("article", "proyecto");
-    const img = el("img");
-    img.src = p.imagen;
-    img.alt = `Imagen del proyecto ${p.titulo}`;
-    img.loading = "lazy";
-    const txt = el("div", "proyecto-texto");
-    txt.append(el("p", "proyecto-tipo", p.tipo), el("h3", null, p.titulo));
-    const dl = el("dl");
-    [["El reto", p.reto], ["Lo que hice", p.hice], ["El resultado", p.resultado]].forEach(([k, v]) => {
-      dl.append(el("dt", null, k), el("dd", null, v));
-    });
-    txt.append(dl);
-    art.append(img, txt);
-    cont.append(art);
+  // Experiencia
+  const exp = $("[data-experiencia]");
+  C.experiencia.forEach((x) => {
+    const art = el("article", x.imagen ? "puesto con-imagen" : "puesto");
+    const cab = el("div", "puesto-cab");
+    cab.append(el("p", "puesto-fechas", x.fechas), el("h3", null, x.puesto), el("p", "puesto-lugar", x.lugar));
+    const cuerpo = el("div", "puesto-cuerpo");
+    if (x.descripcion) cuerpo.append(el("p", null, x.descripcion));
+    if (x.logros && x.logros.length) {
+      const ul = el("ul");
+      x.logros.forEach((l) => ul.append(el("li", null, l)));
+      cuerpo.append(ul);
+    }
+    art.append(cab, cuerpo);
+    if (x.imagen) {
+      const img = el("img");
+      img.src = x.imagen;
+      img.alt = `${x.puesto}, ${x.lugar}`;
+      img.loading = "lazy";
+      art.append(img);
+    }
+    exp.append(art);
   });
 
   // Galería y visor
@@ -101,8 +103,6 @@
   });
 
   // Sobre mí
-  $("[data-retrato]").src = C.retrato;
-  $("[data-retrato]").alt = `Retrato de ${C.nombre}`;
   $("[data-sobre]").textContent = C.sobreMi;
   C.formacion.forEach((f) => {
     const li = el("li");
