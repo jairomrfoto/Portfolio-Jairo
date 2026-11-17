@@ -33,6 +33,7 @@ const CONTENIDO = {
 
   // ---------- Trabajo (portfolio) ----------
   // disciplina: "Fotografía", "Marketing" o "Publicidad"
+  // Opcional: rol, enlace { texto, url }, secciones [{ titulo, texto }]. Las imágenes pueden ser .mp4 (con poster).
   // imagenes: fotos que se ven al abrir el proyecto (la primera es la portada)
   trabajos: [
     {
@@ -65,25 +66,92 @@ const CONTENIDO = {
       ],
     },
     {
-      titulo: "Proyecto de marketing",                           // ← nombre real
+      titulo: "Komix",
       disciplina: "Marketing",
-      anio: "20XX",
-      resumen: "Qué era el proyecto, qué hiciste y qué salió.",   // ← completa
-      imagenes: [{ src: "assets/proyectos/proyecto-1.webp", pie: "Pie de imagen" }],
+      anio: "2026",
+      resumen: "Plataforma de juegos para jugar en grupo, cara a cara: la tele hace de tablero y cada móvil, de mando.",
+      rol: "Proyecto propio: idea, naming, identidad, estrategia y lanzamiento. Desarrollo apoyado en herramientas de IA.", // ← revisa
+      enlace: { texto: "Ver la web", url: "https://play-it-jbvx.onrender.com" },
+      secciones: [
+        { titulo: "El reto",
+          texto: "Crear juegos de fiesta que se jueguen mirando a las personas y no a la pantalla. Sin descargar nada ni registrarse: se crea una sala, se escanea un QR y a jugar. Ocho juegos y dos modos: Amigos y Bar, donde cada mesa es un equipo." },
+        { titulo: "Naming",
+          texto: "El prototipo se llamaba PLAYIT, un nombre genérico y sin nada propio que registrar. Exploré alternativas y fui descartándolas: Zasca ya tenía un competidor, Vicio estaba saturado, Dimoni chocaba con marcas de hostelería y Diábolo, con Diablo. El nombre final es Komix, acompañado de una mascota propia: un diablillo travieso." },
+        { titulo: "Identidad",
+          texto: "Fondo blanco, rojo y negro, con estética de cómic. Diseñé el vídeo de la portada y ocho tráilers, uno por juego, con escenas de cómic que se entienden sin sonido." },
+        { titulo: "Problemas y soluciones",
+          texto: "La competencia es fuerte: packs de apps con millones de descargas. La diferencia está en jugar sin instalar nada y cara a cara, y en el modo Bar, que abre un canal de venta a locales. La viabilidad salió ajustada, así que la decisión fue validar con bares antes de invertir en publicidad y comprobar dominio y registro de marca antes del lanzamiento." },
+      ],
+      imagenes: [
+        { src: "assets/proyectos/komix/landing.webp", pie: "Portada de la web" },
+        { src: "assets/proyectos/komix/naming.webp", pie: "Del nombre provisional a Komix: exploración, descartes y decisión" },
+        { src: "assets/proyectos/komix/video.mp4", poster: "assets/proyectos/komix/video-poster.webp", pie: "Vídeo de la portada" },
+        { src: "assets/proyectos/komix/movil.webp", pie: "Versión móvil" },
+        { src: "assets/proyectos/komix/impostor.webp", pie: "Tráiler del juego El impostor" },
+      ],
     },
     {
-      titulo: "Proyecto de publicidad",                          // ← nombre real
-      disciplina: "Publicidad",
-      anio: "20XX",
-      resumen: "Qué era el proyecto, qué hiciste y qué salió.",   // ← completa
-      imagenes: [{ src: "assets/proyectos/proyecto-2.webp", pie: "Pie de imagen" }],
+      titulo: "Fauniverse",
+      disciplina: "Marketing",
+      anio: "2026",
+      resumen: "App para zoos y parques naturales: busca cada especie en el mapa, hazle una foto y desbloquea su ficha.",
+      rol: "Proyecto propio: idea, naming, identidad y estrategia comercial. Desarrollo apoyado en herramientas de IA.", // ← revisa
+      enlace: { texto: "Ver fauniverse.com", url: "https://fauniverse.com" },
+      secciones: [
+        { titulo: "El reto",
+          texto: "Convertir la visita al zoo o al parque natural en una colección. El visitante fotografía a los animales, la inteligencia artificial identifica la especie y se desbloquea su ficha con nombre, nombre científico y curiosidades. Pensada para venderse a zoos y parques." },
+        { titulo: "Naming e identidad",
+          texto: "Nació como Wildex, una Pokédex con estética de cuaderno de naturalista: oscura, científica y con tipografía serif. Evolucionó a Fauniverse, un nombre propio con dominio .com y correo de marca. El logo es una huella dentro de un visor de cámara, con un verde luminoso y un tono pensado para familias." },
+        { titulo: "Problemas y soluciones",
+          texto: "Enseñar el producto a un parque sin cámara ni conexión: lo resolví con un modo demo con perfil, especies de ejemplo y captura simulada. Evitar que se acepte cualquier foto: la app comprueba que hay un animal o una planta identificable y avisa si no está segura. Cada parque es distinto: el mapa y las zonas se configuran por parque. Y para que los correos a los clientes no acabaran en spam, configuré la autenticación del dominio." },
+      ],
+      imagenes: [
+        { src: "assets/proyectos/fauniverse/landing.webp", pie: "Portada de fauniverse.com" },
+        { src: "assets/proyectos/fauniverse/marca.webp", pie: "Evolución de marca: de Wildex a Fauniverse" },
+        { src: "assets/proyectos/fauniverse/app.webp", pie: "Mapa del parque con especies por descubrir" },
+      ],
     },
     {
-      titulo: "Proyecto de branding",                            // ← nombre real
+      titulo: "Kamplay",
       disciplina: "Marketing",
-      anio: "20XX",
-      resumen: "Qué era el proyecto, qué hiciste y qué salió.",   // ← completa
-      imagenes: [{ src: "assets/proyectos/proyecto-3.webp", pie: "Pie de imagen" }],
+      anio: "2026",
+      resumen: "Software para campamentos y campus de verano: coordinación, monitores, familias y profesores en una sola app.",
+      rol: "Proyecto propio: idea, marca, producto y modelo de negocio. Desarrollo apoyado en herramientas de IA.", // ← revisa
+      secciones: [
+        { titulo: "El reto",
+          texto: "Los campamentos se gestionan con papeles, hojas de cálculo y grupos de WhatsApp. Kamplay lo reúne todo: participantes, área médica, actividades, menú, incidencias y comunicación con las familias." },
+        { titulo: "Marca",
+          texto: "Un nombre corto que une campamento y juego, una mascota guía, Kiko, que acompaña a cada perfil dentro de la app, y una paleta naranja y verde que habla de energía y naturaleza. El mensaje: «Gestiona tu campamento de verano sin caos»." },
+        { titulo: "Problemas y soluciones",
+          texto: "El primer prototipo no guardaba nada al recargar y cualquiera podía entrar en cualquier panel. Pasé a una base de datos real, con acceso por perfil y reglas de seguridad. Para poder enseñarlo a campamentos, añadí un modo demo con un campamento de ejemplo. Y definí el modelo de negocio: precio por evento, desde 9 €, sin permanencia." },
+      ],
+      imagenes: [
+        { src: "assets/proyectos/kamplay/landing.webp", pie: "Portada de Kamplay" },
+        { src: "assets/proyectos/kamplay/marca.webp", pie: "Marca, mascota y problemas resueltos" },
+        { src: "assets/proyectos/kamplay/panel.webp", pie: "Panel de coordinación en modo demo" },
+      ],
+    },
+    {
+      titulo: "Jota Power",
+      disciplina: "Marketing",
+      anio: "",                                                  // ← año del TFG
+      resumen: "Trabajo de Fin de Grado de Marketing y Publicidad: plan de marketing completo para lanzar una marca personal de creador de contenido.",
+      rol: "Trabajo de Fin de Grado. Análisis, estrategia, identidad, campaña y viabilidad.",
+      secciones: [
+        { titulo: "El reto",
+          texto: "Diseñar desde cero una marca personal para YouTube, TikTok e Instagram basada en el humor, la autenticidad y la superación, y demostrar que puede sostenerse como proyecto." },
+        { titulo: "Análisis",
+          texto: "Análisis PESTEL, sociodemográfico, socioeconómico y sociocultural, estudio de la competencia y DAFO, para definir el público (16 a 30 años, España y países de habla hispana) y el posicionamiento." },
+        { titulo: "Naming e identidad",
+          texto: "Puntué cinco nombres según cuatro criterios: fácil de recordar, diferenciación, conexión con el público y transmisión de valores. Jota Power ganó con 35 de 40. Diseñé el logotipo, el isotipo «JP», la paleta roja y amarilla y el manual de identidad." },
+        { titulo: "Campaña y viabilidad",
+          texto: "Campaña de lanzamiento con un documental para YouTube, «Una pieza más», piezas para redes, publicidad pagada en Instagram y TikTok y una propuesta de evento con creadores de Cantabria. Cierra con el estudio de viabilidad económica y las acciones de relaciones públicas." },
+      ],
+      imagenes: [
+        { src: "assets/proyectos/jotapower/portada.webp", pie: "Portada del proyecto con el logotipo Jota Power" },
+        { src: "assets/proyectos/jotapower/naming.webp", pie: "Matriz de naming e identidad" },
+        { src: "assets/proyectos/jotapower/creator-fest.webp", pie: "Cartel de la propuesta de evento Cantabria Creator Fest" },
+      ],
     },
   ],
 
@@ -101,6 +169,10 @@ const CONTENIDO = {
         "Planificación de entrenamientos, gestión de la plantilla y preparación de partidos",
         "Comunicación con jugadores, familias y cuerpo técnico",
       ] },
+    { id: "proyectos", tipo: "experiencia", fechas: "2026",
+      titulo: "Proyectos propios de producto y marca", lugar: "Komix, Fauniverse y Kamplay",
+      texto: "Lanzamiento de productos digitales propios: idea, naming, identidad visual, estrategia y desarrollo apoyado en herramientas de IA.",
+      puntos: ["Naming e identidad de marca con mascota y sistema visual propios", "Webs publicadas, vídeos y piezas de comunicación", "Análisis de competencia y viabilidad antes de invertir"] },
     { id: "racing", tipo: "experiencia", fechas: "2024",
       titulo: "Prácticas en el Real Racing Club de Santander", lugar: "Santander",
       texto: "Prácticas en el club, donde realicé sesiones de fotografía de moda con sus prendas.",
@@ -113,7 +185,8 @@ const CONTENIDO = {
       titulo: "Trabajo de verano en Estados Unidos", lugar: "Empresa o lugar, ciudad",  // ← completa
       texto: "Dos temporadas trabajando en Estados Unidos en un entorno 100 % en inglés." },
     { id: "marketing", tipo: "formacion", fechas: "20XX", titulo: "Marketing y Publicidad",
-      lugar: "Centro de estudios" },                             // ← año y centro
+      lugar: "Centro de estudios",
+      texto: "Trabajo de Fin de Grado: plan de marketing completo para la marca personal Jota Power." },                             // ← año y centro
     { id: "foto", tipo: "formacion", fechas: "20XX", titulo: "Fotografía (Artes Plásticas y Diseño)",
       lugar: "Centro de estudios" },                             // ← año y centro
   ],
@@ -123,7 +196,8 @@ const CONTENIDO = {
   capacidades: [
     { nombre: "Fotografía", donde: ["foto", "racing", "gobierno"] },
     { nombre: "Diseño y composición visual", donde: ["foto"] },
-    { nombre: "Marketing", donde: ["marketing"] },
+    { nombre: "Marketing", donde: ["marketing", "proyectos"] },
+    { nombre: "Branding y naming", donde: ["proyectos", "marketing"] },
     { nombre: "Publicidad", donde: ["marketing"] },
     { nombre: "Comercio internacional", donde: ["comercio"] },
     { nombre: "Liderazgo de equipos", donde: ["futbol"] },

@@ -73,7 +73,7 @@
   const pista = $("[data-pista]");
   const formas = ["alta", "ancha", "media"];
   C.trabajos.forEach((t, i) => {
-    const li = el("li", `tarjeta ${formas[i % 3]}`);
+    const li = el("li", `tarjeta ${formas[i % 3]}${t.secciones ? " captura" : ""}`);
     li.dataset.disciplina = t.disciplina;
     const b = el("button", "tarjeta-boton");
     b.type = "button";
@@ -81,12 +81,12 @@
     b.setAttribute("aria-label", `Abrir proyecto: ${t.titulo}, ${t.disciplina}`);
     const fig = el("div", "tarjeta-imagen");
     const img = el("img");
-    img.src = t.imagenes[0].src;
+    img.src = (t.imagenes.find((x) => !/\.(mp4|webm)$/i.test(x.src)) || t.imagenes[0]).src;
     img.alt = "";
     img.loading = "lazy";
     img.decoding = "async";
     fig.append(img);
-    if (t.imagenes.length > 1) fig.append(el("span", "tarjeta-cuantas", `${t.imagenes.length} imágenes`));
+    if (t.imagenes.length > 1) fig.append(el("span", "tarjeta-cuantas", t.secciones ? "Caso completo" : `${t.imagenes.length} imágenes`));
     const info = el("div", "tarjeta-info");
     const meta = el("span", "tarjeta-meta");
     meta.append(el("b", null, t.disciplina), document.createTextNode(t.anio ? `, ${t.anio}` : ""));
@@ -129,14 +129,36 @@
     meta.append(el("b", null, t.disciplina), document.createTextNode(t.anio ? `, ${t.anio}` : ""));
     $("[data-ficha-titulo]").textContent = t.titulo;
     $("[data-ficha-resumen]").textContent = t.resumen;
+    $("[data-ficha-rol]").textContent = t.rol || "";
+    const enl = $("[data-ficha-enlace]");
+    enl.hidden = !t.enlace;
+    if (t.enlace) { enl.href = t.enlace.url; enl.textContent = t.enlace.texto; }
+    const secs = $("[data-ficha-secciones]");
+    secs.textContent = "";
+    (t.secciones || []).forEach((sec) => {
+      const d = el("section");
+      d.append(el("h3", null, sec.titulo), el("p", null, sec.texto));
+      secs.append(d);
+    });
+    $(".ficha-cab").scrollTop = 0;
     const cont = $("[data-ficha-imagenes]");
     cont.textContent = "";
     t.imagenes.forEach((im) => {
       const f = el("figure");
-      const i = el("img");
-      i.src = im.src;
-      i.alt = im.pie || t.titulo;
-      i.decoding = "async";
+      let i;
+      if (/\.(mp4|webm)$/i.test(im.src)) {
+        i = document.createElement("video");
+        i.src = im.src;
+        if (im.poster) i.poster = im.poster;
+        i.controls = true; i.muted = true; i.loop = true; i.playsInline = true;
+        i.preload = "none";
+        i.setAttribute("aria-label", im.pie || t.titulo);
+      } else {
+        i = el("img");
+        i.src = im.src;
+        i.alt = im.pie || t.titulo;
+        i.decoding = "async";
+      }
       f.append(i);
       if (im.pie) f.append(el("figcaption", null, im.pie));
       cont.append(f);
@@ -149,6 +171,7 @@
   const cerrarFicha = () => ficha.close();
   $("[data-ficha-cerrar]").addEventListener("click", cerrarFicha);
   ficha.addEventListener("close", () => {
+    $$("video", ficha).forEach((v) => v.pause());
     document.body.classList.remove("ficha-abierta");
     origenFicha?.focus?.();
   });

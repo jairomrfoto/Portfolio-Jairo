@@ -224,6 +224,7 @@ body.menu-abierto .cab { background: var(--negro); color: var(--blanco); }
 .tarjeta-boton { display: block; background: none; border: 0; padding: 0; text-align: left; cursor: pointer; }
 .tarjeta-imagen { position: relative; overflow: hidden; background: var(--suave); }
 .tarjeta-imagen img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--curva); }
+.tarjeta.captura .tarjeta-imagen img { object-position: left top; }
 .tarjeta-boton:hover .tarjeta-imagen img, .tarjeta-boton:focus-visible .tarjeta-imagen img { transform: scale(1.045); }
 .tarjeta-info { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 1rem; }
 .tarjeta-titulo { font-size: clamp(1.3rem, 2vw, 1.9rem); font-weight: 700; font-variation-settings: "wdth" 82; line-height: 1.05; }
@@ -253,20 +254,27 @@ body.menu-abierto .cab { background: var(--negro); color: var(--blanco); }
 .ficha { border: 0; padding: 0; margin: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; background: var(--blanco); color: var(--negro); }
 .ficha::backdrop { background: rgb(0 0 0 / .6); }
 .ficha[open] { animation: obturador .8s var(--curva-suave); }
-.ficha-interior { display: grid; grid-template-columns: minmax(280px, 1fr) 2fr; height: 100%; }
-.ficha-cab { position: relative; padding: clamp(5rem, 9vh, 7rem) var(--margen) 2rem; border-right: 1px solid var(--linea); display: flex; flex-direction: column; }
+.ficha-interior { display: grid; grid-template-columns: minmax(320px, 1fr) 1.6fr; height: 100%; }
+.ficha-cab { position: relative; padding: clamp(5rem, 9vh, 7rem) var(--margen) 3rem; border-right: 1px solid var(--linea); display: flex; flex-direction: column; overflow-y: auto; }
 .ficha-meta { margin: 0 0 1rem; color: var(--gris); }
 .ficha-meta b { color: var(--rojo); font-weight: 600; }
 .ficha-cab h2 { font-size: clamp(2.4rem, 4.5vw, 4.4rem); font-variation-settings: "wdth" 78; letter-spacing: -.005em; line-height: .95; }
 .ficha-resumen { font-size: 1.15rem; max-width: 36ch; margin: 1.5rem 0 0; }
 .ficha-cerrar {
-  position: absolute; top: 1.4rem; left: var(--margen); border: 1.5px solid var(--negro); background: none; border-radius: 999px;
+  position: fixed; top: 1.4rem; left: var(--margen); z-index: 3; border: 1.5px solid var(--negro); background: var(--blanco); box-shadow: 0 0 0 12px var(--blanco); border-radius: 999px;
   padding: .45rem 1rem; cursor: pointer; font-weight: 600; transition: background .3s, color .3s, border-color .3s;
 }
 .ficha-cerrar:hover { background: var(--rojo); border-color: var(--rojo); color: var(--blanco); }
 .ficha-imagenes { overflow-y: auto; padding: clamp(1.5rem, 4vw, 3rem); display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-content: start; }
 .ficha-imagenes figure { margin: 0; }
-.ficha-imagenes img { width: 100%; height: auto; max-height: 85vh; object-fit: contain; object-position: left top; }
+.ficha-imagenes img, .ficha-imagenes video { width: 100%; height: auto; max-height: 85vh; object-fit: contain; object-position: left top; background: var(--suave); }
+.ficha-imagenes video { aspect-ratio: 16 / 9; }
+.ficha-rol { margin: 1.2rem 0 0; color: var(--gris); font-size: .98rem; max-width: 40ch; }
+.ficha-enlace { margin-top: 1.2rem; align-self: flex-start; color: var(--rojo); font-weight: 700; text-underline-offset: 4px; }
+.ficha-secciones { margin-top: 2rem; display: grid; gap: 1.6rem; }
+.ficha-secciones section { border-top: 2px solid var(--negro); padding-top: .9rem; }
+.ficha-secciones h3 { font-size: 1.25rem; font-variation-settings: "wdth" 80; margin-bottom: .5rem; }
+.ficha-secciones p { margin: 0; max-width: 46ch; }
 .ficha-imagenes figcaption { margin-top: .6rem; color: var(--gris); font-size: .92rem; }
 body.ficha-abierta { overflow: hidden; }
 
@@ -400,7 +408,7 @@ body.ficha-abierta { overflow: hidden; }
   .tarjeta .tarjeta-imagen { height: auto !important; width: 100%; aspect-ratio: 4 / 5 !important; }
   .tarjeta.ancha, .tarjeta.media { align-self: auto; }
   .ficha-interior { grid-template-columns: 1fr; grid-template-rows: auto 1fr; overflow-y: auto; }
-  .ficha-cab { border-right: 0; padding-top: 4.5rem; }
+  .ficha-cab { border-right: 0; padding-top: 4.5rem; overflow: visible; }
   .ficha-imagenes { overflow: visible; padding-top: 0; }
   .contacto { min-height: 88svh; }
   .pie { flex-direction: column; }
