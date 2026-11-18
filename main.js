@@ -21,6 +21,7 @@
   /* ---------- Contenido ---------- */
   $$("[data-nombre]").forEach((n) => (n.textContent = C.nombre));
   $("[data-anio]").textContent = new Date().getFullYear();
+  if ($("[data-frase]")) {
   $("[data-frase]").textContent = C.frase;
   const portada = $("[data-foto-portada]");
   portada.src = C.fotoPortada;
@@ -39,6 +40,7 @@
     nombreGrande.append(l);
   });
   $$(".hero-texto > *").forEach((n, i) => n.style.setProperty("--i", i));
+  }
 
   // Pilares
   const pilares = $("[data-pilares]");
@@ -71,6 +73,7 @@
 
   /* ---------- Trabajo ---------- */
   const pista = $("[data-pista]");
+  if (pista) {
   const formas = ["alta", "ancha", "media"];
   C.trabajos.forEach((t, i) => {
     const li = el("li", `tarjeta ${formas[i % 3]}${t.secciones ? " captura" : ""}`);
@@ -118,6 +121,7 @@
     });
     filtros.append(b);
   });
+  }
 
   // Ficha de proyecto
   const ficha = $("[data-ficha]");
@@ -346,6 +350,7 @@
   let recorrido = 0;
 
   function medirGaleria() {
+    if (!trabajo || !pista) { galeriaFijada = false; enScroll(); return; }
     galeriaFijada = esEscritorio.matches && !reducir.matches;
     trabajo.classList.toggle("fijada", galeriaFijada);
     pista.style.transform = "";
@@ -366,9 +371,9 @@
 
     if (!reducir.matches) {
       // Portada: la foto se encuadra y el nombre se estira
-      const recorridoHero = hero.offsetHeight - vh;
+      const recorridoHero = hero ? hero.offsetHeight - vh : 0;
       const pHero = recorridoHero > vh * 0.2 ? clamp(y / recorridoHero, 0, 1) : 0;
-      heroFijo.style.setProperty("--p", pHero.toFixed(4));
+      if (heroFijo) heroFijo.style.setProperty("--p", pHero.toFixed(4));
     }
 
     // Galería horizontal
@@ -419,7 +424,7 @@
   reducir.addEventListener("change", medirGaleria);
 
   // En móvil, la barra de progreso sigue el desplazamiento táctil
-  pistaMarco.addEventListener("scroll", () => {
+  if (pistaMarco) pistaMarco.addEventListener("scroll", () => {
     if (galeriaFijada) return;
     const max = pistaMarco.scrollWidth - pistaMarco.clientWidth;
     progreso.style.setProperty("--avance", max > 0 ? (pistaMarco.scrollLeft / max).toFixed(4) : 1);
@@ -466,7 +471,24 @@
   $$("[data-iman]").forEach((b) => (b.dataset.cursor = "Email"));
 
   /* ---------- Entrada ---------- */
-  if (!reducir.matches) {
+  // Escena del portátil y carnet (módulos opcionales)
+  window.abrirFicha = abrirFicha;
+  const raizEscena = $("[data-escena]");
+  if (raizEscena && window.Escena) {
+    window.Escena.montar(raizEscena, C, { onAbrir: (t) => abrirFicha(t) });
+    const slot = $("[data-carnet-slot]", raizEscena);
+    if (slot && window.Carnet) {
+      window.Carnet.montar(slot, {
+        nombre: C.nombreCompleto || C.nombre,
+        foto: C.fotoPortada,
+        cargo: "Comercio internacional · Marketing · Fotografía",
+        anio: String(new Date().getFullYear()),
+        campos: [["Nombre", C.nombreCompleto || C.nombre], ["Enfoque", "Marketing y fotografía"], ["IG", "@jairomrfoto"], ["Email", C.email]],
+      });
+    }
+  }
+
+  if (!reducir.matches && hero) {
     document.body.classList.add("intro");
     setTimeout(() => document.body.classList.remove("intro"), 2600);
   }

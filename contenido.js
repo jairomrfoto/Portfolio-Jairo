@@ -6,7 +6,8 @@
    ========================================================= */
 
 const CONTENIDO = {
-  nombre: "Jairo",                                  // ← nombre completo si quieres
+  nombre: "Jairo",
+  nombreCompleto: "Jairo Martínez",
   fotoPortada: "assets/jairo-portada.webp",         // foto recortada, sin fondo (PNG/WebP con transparencia)
 
   // Frase corta bajo el nombre

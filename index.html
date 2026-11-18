@@ -16,7 +16,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fuentes/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/jairo-portada.webp" as="image">
   <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="modulos/escena.css">
+  <link rel="stylesheet" href="modulos/carnet.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,24 +70,8 @@
   </div>
 
   <main id="contenido">
-    <!-- PORTADA -->
-    <section class="hero" id="inicio" aria-label="Presentación">
-      <div class="hero-fijo">
-        <div class="hero-texto">
-          <p class="hero-frase" data-frase></p>
-          <a class="hero-explorar" href="#trabajo" data-cursor="Ver">
-            <span>Ver mi trabajo</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          </a>
-          <a class="hero-cv" data-cv-enlace download hidden>Descargar CV (PDF)</a>
-        </div>
-        <figure class="hero-foto visor">
-          <img data-foto-portada alt="" fetchpriority="high">
-          <span class="esq tl"></span><span class="esq tr"></span><span class="esq bl"></span><span class="esq br"></span>
-        </figure>
-        <h1 class="hero-nombre" data-nombre-grande>Jairo</h1>
-      </div>
-    </section>
+    <!-- PORTADA + PORTÁTIL (modulos/escena.js) -->
+    <section id="inicio" data-escena aria-label="Presentación y trabajo"></section>
 
     <!-- SOBRE MÍ -->
     <section class="sobre" id="sobre-mi" aria-labelledby="t-sobre">
@@ -93,20 +80,6 @@
       <div class="sobre-cierre">
         <p class="sobre-texto" data-sobre data-reveal></p>
         <dl class="idiomas" data-idiomas data-reveal></dl>
-      </div>
-    </section>
-
-    <!-- TRABAJO -->
-    <section class="trabajo" id="trabajo" aria-labelledby="t-trabajo">
-      <div class="trabajo-fijo">
-        <div class="trabajo-cab">
-          <h2 class="titulo-seccion" id="t-trabajo">Trabajo</h2>
-          <div class="filtros" role="group" aria-label="Filtrar por disciplina" data-filtros></div>
-        </div>
-        <div class="pista-marco">
-          <ul class="pista" data-pista></ul>
-        </div>
-        <div class="trabajo-progreso" aria-hidden="true"><span data-progreso></span></div>
       </div>
     </section>
 
@@ -181,6 +154,8 @@
   </dialog>
 
   <script src="contenido.js"></script>
+  <script src="modulos/escena.js"></script>
+  <script src="modulos/carnet.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
