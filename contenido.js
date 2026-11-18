@@ -85,6 +85,9 @@ const CONTENIDO = {
           texto: "Tienda online propia en xsoccer.es, con personalización subiendo tus fotos, entrega en 2 o 3 días laborables y atención por WhatsApp Business. Abrimos Instagram y TikTok (@xsoccer.es) para enseñar los diseños de los clientes y generar comunidad." },
       ],
       imagenes: [
+        { src: "assets/proyectos/xsoccer/logo.webp", pie: "Logotipo de Xsoccer" },
+        { src: "assets/proyectos/xsoccer/espinillera-real.webp", pie: "Espinillera personalizada terminada, con la foto y el dorsal del jugador" },
+        { src: "assets/proyectos/xsoccer/diseno-saiyans.webp", pie: "Diseño para una jugadora de Saiyans F.C." },
         { src: "assets/proyectos/xsoccer/proceso.webp", pie: "Proceso de trabajo y sistema de naming" },
       ],
     },

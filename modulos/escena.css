@@ -465,7 +465,7 @@
 /* Etiqueta clavada con esquinas de enfoque */
 .escena-etiqueta {
   left: calc(var(--lap-der, 900px) - 170px);
-  top: calc(var(--lap-sup, 200px) - 58px);
+  top: max(calc(var(--nav-top, 84px) + 44px), calc(var(--lap-sup, 200px) - 58px));
   max-width: min(330px, calc(100vw - var(--lap-der, 900px) + 170px - var(--margen-x)));
   pointer-events: none !important;
 }
@@ -584,7 +584,7 @@
 .escena[data-modo="medio"] .escena-control { top: calc(var(--lap-cy, 400px) - 36px); }
 .escena[data-modo="medio"] .escena-control--ant { left: calc(var(--lap-izq, 200px) / 2 - 28px); }
 .escena[data-modo="medio"] .escena-control--sig { right: calc((100% - var(--lap-der, 800px)) / 2 - 28px); }
-.escena[data-modo="medio"] .escena-etiqueta { left: calc(var(--lap-der, 800px) - 150px); top: calc(var(--lap-sup, 200px) - 46px); }
+.escena[data-modo="medio"] .escena-etiqueta { left: calc(var(--lap-der, 800px) - 150px); top: max(calc(var(--nav-top, 84px) + 44px), calc(var(--lap-sup, 200px) - 46px)); }
 .escena[data-modo="medio"] .etiqueta-titulo { font-size: clamp(22px, 3vw, 32px); }
 .escena[data-modo="medio"] .etiqueta-cuerpo { padding: 14px 18px 12px; }
 
@@ -667,3 +667,6 @@
 
 /* En móvil el carnet tapaba el nombre: se oculta */
 .escena[data-modo="movil"] .escena-carnet { display: none; }
+
+/* En anchos medios el rótulo central chocaba con los botones de la derecha */
+@media (max-width: 1100px) { .escena-marca { display: none; } }
