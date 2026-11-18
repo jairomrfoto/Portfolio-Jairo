@@ -38,6 +38,7 @@ const CONTENIDO = {
   trabajos: [
     {
       titulo: "Real Racing Club de Santander",
+      pantalla: "assets/pantallas/racing.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Fotografía",
       anio: "2024",
       resumen:
@@ -52,6 +53,7 @@ const CONTENIDO = {
     },
     {
       titulo: "Gobierno de Cantabria",
+      pantalla: "assets/pantallas/gobierno.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Fotografía",
       anio: "2023",
       resumen:
@@ -67,6 +69,7 @@ const CONTENIDO = {
     },
     {
       titulo: "Xsoccer",
+      pantalla: "assets/pantallas/xsoccer.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Marketing",
       anio: "2023 – 2025",
       resumen: "Marca de espinilleras de fútbol personalizadas creada desde cero, de la importación de la materia prima a la venta online.",
@@ -86,6 +89,7 @@ const CONTENIDO = {
     },
     {
       titulo: "Komix",
+      pantalla: "assets/pantallas/komix.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Marketing",
       anio: "2026",
       resumen: "Plataforma de juegos para jugar en grupo, cara a cara: la tele hace de tablero y cada móvil, de mando.",
@@ -111,6 +115,7 @@ const CONTENIDO = {
     },
     {
       titulo: "Fauniverse",
+      pantalla: "assets/pantallas/fauniverse.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Marketing",
       anio: "2026",
       resumen: "App para zoos y parques naturales: busca cada especie en el mapa, hazle una foto y desbloquea su ficha.",
@@ -132,6 +137,7 @@ const CONTENIDO = {
     },
     {
       titulo: "Kamplay",
+      pantalla: "assets/pantallas/kamplay.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Marketing",
       anio: "2026",
       resumen: "Software para campamentos y campus de verano: coordinación, monitores, familias y profesores en una sola app.",
@@ -152,6 +158,7 @@ const CONTENIDO = {
     },
     {
       titulo: "Jota Power",
+      pantalla: "assets/pantallas/jotapower.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Marketing",
       anio: "",                                                  // ← año del TFG
       resumen: "Trabajo de Fin de Grado de Marketing y Publicidad: plan de marketing completo para lanzar una marca personal de creador de contenido.",
