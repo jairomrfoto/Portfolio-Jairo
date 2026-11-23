@@ -60,7 +60,7 @@
       nombreH.appendChild(s);
     });
     var anotacion = el("p", { class: "escena-anotacion" }, [
-      el("span", { class: "escena-anotacion-texto", text: "fotografía & marketing" }),
+      el("span", { class: "escena-anotacion-texto", text: "comercio · marketing · foto" }),
       el("span", { "aria-hidden": "true", html: '<svg viewBox="0 0 60 40"><path d="M3 6 C 20 4, 38 10, 46 30 M38 25 l8 6 l2 -10"/></svg>' })
     ]);
     var titular = el("div", { class: "escena-titular" }, [nombreH]);

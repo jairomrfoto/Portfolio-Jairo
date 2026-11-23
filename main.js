@@ -19,7 +19,7 @@
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   /* ---------- Contenido ---------- */
-  $$("[data-nombre]").forEach((n) => (n.textContent = C.nombre));
+  $$("[data-nombre]").forEach((n) => (n.textContent = C.nombreCompleto || C.nombre));
   $("[data-anio]").textContent = new Date().getFullYear();
   if ($("[data-frase]")) {
   $("[data-frase]").textContent = C.frase;
@@ -483,7 +483,7 @@
         foto: C.fotoPortada,
         cargo: "Comercio internacional · Marketing · Fotografía",
         anio: String(new Date().getFullYear()),
-        campos: [["Nombre", C.nombreCompleto || C.nombre], ["Enfoque", "Marketing y fotografía"], ["IG", "@jairomrfoto"], ["Email", C.email]],
+        campos: [["Nombre", C.nombreCompleto || C.nombre], ["Enfoque", "Comercio int. y marketing"], ["IG", "@jairomrfoto"], ["Email", C.email]],
       });
     }
   }

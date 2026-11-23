@@ -21,7 +21,7 @@ const CONTENIDO = {
 
   // ---------- Sobre mí: los tres pilares ----------
   pilares: [
-    { verbo: "Mirar", area: "Fotografía y Artes Plásticas y Diseño",
+    { verbo: "Mirar", area: "Fotografía (Artes Plásticas y Diseño)",
       texto: "La fotografía y el diseño me dieron el ojo: encuadre, luz y composición." },
     { verbo: "Comunicar", area: "Marketing y Publicidad",
       texto: "El marketing y la publicidad me enseñaron a convertir una idea en un mensaje y una marca." },
@@ -189,10 +189,10 @@ const CONTENIDO = {
   // tipo: "experiencia" o "formacion". id: palabra corta para enlazarla con las capacidades.
   trayectoria: [
     { id: "comercio", tipo: "formacion", fechas: "2026", titulo: "Comercio Internacional",
-      lugar: "Centro de estudios",                               // ← centro
-      texto: "Formación que estoy terminando." },
-    { id: "futbol", tipo: "experiencia", fechas: "20XX – 2026",  // ← fechas
-      titulo: "Entrenador de fútbol", lugar: "Club o clubes",     // ← club
+      lugar: "",                                   // ← centro de estudios
+      texto: "Formación que estoy terminando (fin previsto en 2026)." },
+    { id: "futbol", tipo: "experiencia", fechas: "",               // ← temporadas (p. ej. 2018 – 2026)
+      titulo: "Entrenador de fútbol", lugar: "",                // ← club o clubes
       texto: "Equipos de todas las edades, desde niños de 5 años hasta categoría senior en Tercera División.",
       puntos: [
         "Dirección de grupos muy distintos: de la iniciación infantil al fútbol semiprofesional",
@@ -219,14 +219,14 @@ const CONTENIDO = {
       titulo: "Prácticas en el Gobierno de Cantabria", lugar: "Santander",
       texto: "Prácticas en las que cubrí con fotografía actos institucionales, firmas y atención a medios.",
       puntos: ["Fotografía de actos oficiales, eventos y comparecencias ante la prensa"] },
-    { id: "eeuu", tipo: "experiencia", fechas: "Veranos 20XX y 20XX", // ← años
-      titulo: "Trabajo de verano en Estados Unidos", lugar: "Empresa o lugar, ciudad",  // ← completa
+    { id: "eeuu", tipo: "experiencia", fechas: "Dos veranos",       // ← años
+      titulo: "Trabajo de verano en Estados Unidos", lugar: "Estados Unidos",  // ← empresa y ciudad
       texto: "Dos temporadas trabajando en Estados Unidos en un entorno 100 % en inglés." },
-    { id: "marketing", tipo: "formacion", fechas: "20XX", titulo: "Marketing y Publicidad",
-      lugar: "Centro de estudios",
+    { id: "marketing", tipo: "formacion", fechas: "", titulo: "Marketing y Publicidad",
+      lugar: "",                                   // ← año y centro
       texto: "Trabajo de Fin de Grado: plan de marketing completo para la marca personal Jota Power." },                             // ← año y centro
-    { id: "foto", tipo: "formacion", fechas: "20XX", titulo: "Fotografía (Artes Plásticas y Diseño)",
-      lugar: "Centro de estudios" },                             // ← año y centro
+    { id: "foto", tipo: "formacion", fechas: "", titulo: "Fotografía (Artes Plásticas y Diseño)",
+      lugar: "" },                                 // ← año y centro                             // ← año y centro
   ],
 
   // ---------- Capacidades ----------
@@ -245,8 +245,8 @@ const CONTENIDO = {
   // Idiomas, con tus palabras
   idiomas: [
     { idioma: "Español", nivel: "Nativo" },
-    { idioma: "Inglés", nivel: "Con soltura" },
-    { idioma: "Francés", nivel: "Me desenvuelvo bien" },
+    { idioma: "Inglés", nivel: "B2 · dos veranos trabajando en EE. UU." },
+    { idioma: "Francés", nivel: "B1" },
   ],
   // Herramientas que usas de verdad (vacío = no se muestra)
   herramientas: [],                                 // ← p. ej. ["Lightroom", "Photoshop"]
