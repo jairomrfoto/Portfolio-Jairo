@@ -7,7 +7,7 @@
 
 const CONTENIDO = {
   nombre: "Jairo",
-  nombreCompleto: "Jairo Martínez",
+  nombreCompleto: "Jairo Martínez Roldán",
   fotoPortada: "assets/jairo-portada.webp",         // foto recortada, sin fondo (PNG/WebP con transparencia)
 
   // Frase corta bajo el nombre
@@ -30,7 +30,7 @@ const CONTENIDO = {
   ],
   sobreMi:
     "Fuera de las aulas, años como entrenador de fútbol me han enseñado a liderar grupos, " +
-    "y dos veranos trabajando en Estados Unidos, a desenvolverme en otro idioma y otra cultura.",
+    "dos veranos trabajando en Estados Unidos y viajes a 10 países de 4 continentes, a adaptarme a otros idiomas y culturas.",
 
   // ---------- Trabajo (portfolio) ----------
   // disciplina: "Fotografía", "Marketing" o "Publicidad"
@@ -82,7 +82,7 @@ const CONTENIDO = {
         { titulo: "Naming y producto",
           texto: "Elegimos el nombre Xsoccer y construimos un sistema alrededor de la X: Espinillera X, Mini X, XTape, XSocks y el KIT XSC. Así la marca se reconoce en todo el catálogo y es fácil ampliarlo. También creamos una línea para equipos y clubes." },
         { titulo: "Venta y comunidad",
-          texto: "Tienda online propia en xsoccer.es, con personalización subiendo tus fotos, entrega en 2 o 3 días laborables y atención por WhatsApp Business. Abrimos Instagram y TikTok (@xsoccer.es) para enseñar los diseños de los clientes y generar comunidad." },
+          texto: "Más de 400 pedidos. Tienda online propia en xsoccer.es, con personalización subiendo tus fotos, entrega en 2 o 3 días laborables y atención por WhatsApp Business. Abrimos Instagram y TikTok (@xsoccer.es) para enseñar los diseños de los clientes y generar comunidad." },
       ],
       imagenes: [
         { src: "assets/proyectos/xsoccer/logo.webp", pie: "Logotipo de Xsoccer" },
@@ -165,8 +165,8 @@ const CONTENIDO = {
       pantalla: "assets/pantallas/jotapower.webp",   // imagen 16:10 para la pantalla del portátil
       disciplina: "Marketing",
       anio: "",                                                  // ← año del TFG
-      resumen: "Trabajo de Fin de Grado de Marketing y Publicidad: plan de marketing completo para lanzar una marca personal de creador de contenido.",
-      rol: "Trabajo de Fin de Grado. Análisis, estrategia, identidad, campaña y viabilidad.",
+      resumen: "Proyecto final del Grado Superior en Marketing y Publicidad: plan de marketing completo para lanzar una marca personal de creador de contenido.",
+      rol: "Proyecto final de ciclo. Análisis, estrategia, identidad, campaña y viabilidad.",
       secciones: [
         { titulo: "El reto",
           texto: "Diseñar desde cero una marca personal para YouTube, TikTok e Instagram basada en el humor, la autenticidad y la superación, y demostrar que puede sostenerse como proyecto." },
@@ -188,8 +188,8 @@ const CONTENIDO = {
   // ---------- Trayectoria ----------
   // tipo: "experiencia" o "formacion". id: palabra corta para enlazarla con las capacidades.
   trayectoria: [
-    { id: "comercio", tipo: "formacion", fechas: "2026", titulo: "Comercio Internacional",
-      lugar: "",                                   // ← centro de estudios
+    { id: "comercio", tipo: "formacion", fechas: "2026", titulo: "Técnico Superior en Comercio Internacional",
+      lugar: "Aspasia, Santander",
       texto: "Formación que estoy terminando (fin previsto en 2026)." },
     { id: "futbol", tipo: "experiencia", fechas: "",               // ← temporadas (p. ej. 2018 – 2026)
       titulo: "Entrenador de fútbol", lugar: "",                // ← club o clubes
@@ -203,6 +203,7 @@ const CONTENIDO = {
       titulo: "Cofundador de Xsoccer", lugar: "Revilla de Camargo, Cantabria",
       texto: "Marca de espinilleras de fútbol personalizadas con producción propia y venta online.",
       puntos: [
+        "Más de 400 pedidos gestionados",
         "Importación de materia prima desde China y producción con maquinaria propia",
         "Naming, identidad y diseño gráfico de cada pedido",
         "Tienda online, Instagram, TikTok y atención al cliente por WhatsApp Business",
@@ -220,13 +221,15 @@ const CONTENIDO = {
       texto: "Prácticas en las que cubrí con fotografía actos institucionales, firmas y atención a medios.",
       puntos: ["Fotografía de actos oficiales, eventos y comparecencias ante la prensa"] },
     { id: "eeuu", tipo: "experiencia", fechas: "Dos veranos",       // ← años
-      titulo: "Trabajo de verano en Estados Unidos", lugar: "Estados Unidos",  // ← empresa y ciudad
-      texto: "Dos temporadas trabajando en Estados Unidos en un entorno 100 % en inglés." },
-    { id: "marketing", tipo: "formacion", fechas: "", titulo: "Marketing y Publicidad",
-      lugar: "",                                   // ← año y centro
-      texto: "Trabajo de Fin de Grado: plan de marketing completo para la marca personal Jota Power." },                             // ← año y centro
-    { id: "foto", tipo: "formacion", fechas: "", titulo: "Fotografía (Artes Plásticas y Diseño)",
-      lugar: "" },                                 // ← año y centro                             // ← año y centro
+      titulo: "Trabajo de verano en Estados Unidos", lugar: "Noah's Ark, Estados Unidos",
+      texto: "Dos temporadas trabajando en Noah's Ark (Estados Unidos) en un entorno 100 % en inglés." },
+    { id: "marketing", tipo: "formacion", fechas: "", titulo: "Técnico Superior en Marketing y Publicidad",
+      lugar: "Formación y Empleo, Santander",
+      texto: "Proyecto final: plan de marketing completo para la marca personal Jota Power." },                             // ← año y centro
+    { id: "foto", tipo: "formacion", fechas: "", titulo: "Técnico Superior en Fotografía (Artes Plásticas y Diseño)",
+      lugar: "Ángeles Custodios, Santander" },
+    { id: "bachillerato", tipo: "formacion", fechas: "", titulo: "Bachillerato",
+      lugar: "IES Valle de Camargo" },
   ],
 
   // ---------- Capacidades ----------
@@ -249,5 +252,5 @@ const CONTENIDO = {
     { idioma: "Francés", nivel: "B1" },
   ],
   // Herramientas que usas de verdad (vacío = no se muestra)
-  herramientas: [],                                 // ← p. ej. ["Lightroom", "Photoshop"]
+  herramientas: ["Photoshop", "Lightroom", "Excel", "Canva", "Shopify"],
 };
